@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input{
+                margin: 10px;
+                height: 30px;
+                width: 180px;
+                border-color: aqua;
+            }
+        </style>
+        <script>
+            //começo dos cálculos
+            function calcular (){
+        var v1 = document.getElementById("valor1").value;
+        var v2 = document.getElementById("valor2").value;
+
+        var operação = document.getElementById("oper").value;
+        //condições
+        if (operação == "soma"){
+            alert (parseInt(v1) + parseInt(v2));
+        }
+        else if (operação == "mult"){
+            alert (parseInt(v1) * parseInt(v2));
+        }
+            }
+        </script>
+    </head>
+    <body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    
+        <input type="text" id="valor1">
+        <input type="text" id="valor2">
+     
+        <select id="oper">
+       <option value="soma">SOMA</option>
+       <option value="mult">MULTIPLICAÇAO</option>
+       
+       
+        </select>
+        <input type="submit" onclick="calcular();" value="CALCULAR">
+    </body>
+</html>
